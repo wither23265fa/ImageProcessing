@@ -79,7 +79,7 @@ namespace imageProcess
 
         private void stoneButton_Click(object sender, EventArgs e)
         {
-            
+			updateImage(_imgProcesser._relief(), 1);
         }
 
         private void negativeButton_Click(object sender, EventArgs e)
@@ -89,12 +89,12 @@ namespace imageProcess
 
         private void gaussButton_Click(object sender, EventArgs e)
         {
-           
+			updateImage(_imgProcesser._blur(2), 1);
         }
 
         private void laplasButton_Click(object sender, EventArgs e)
         {
-           
+			updateImage(_imgProcesser._crispening(), 1);
         }
 
         private void redButton_Click(object sender, EventArgs e)
@@ -108,8 +108,8 @@ namespace imageProcess
         }
 
         private void masaicButton_Click(object sender, EventArgs e)
-        {   
-        
+        {
+			updateImage(_imgProcesser._piexlization(5), 1);
         }      
     }
 }
