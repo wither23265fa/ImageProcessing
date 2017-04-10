@@ -64,7 +64,8 @@ public class imageProcesser
 				Color piexlColor = image.GetPixel(x, y);
 				gray = piexlColor.R * 299 + piexlColor.G * 587 + piexlColor.B * 114;
 				gray = gray / 1000;
-				image.SetPixel(x, y, Color.FromArgb(piexlColor.R, gray, gray));
+				if (piexlColor.R < piexlColor.G + piexlColor.B)
+					image.SetPixel(x, y, Color.FromArgb(gray, gray, gray));
 			}
 		}
 		return image;
